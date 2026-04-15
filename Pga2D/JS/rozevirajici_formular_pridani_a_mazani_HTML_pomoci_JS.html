@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulář</title>
+</head>
+<body>
+
+<form id="myForm">
+    <input type="text" placeholder="Jméno"><br>
+    <input type="password" placeholder="Heslo"><br>
+
+    <input type="checkbox" onclick="rozloz()" id="emailCheck">
+    vyplnit Email<br>
+
+    <button type="submit">Odeslat</button>
+</form>
+
+<script>
+    function rozloz() {
+        let checkbox = document.getElementById("emailCheck");
+        let form = document.getElementById("myForm");
+
+        let existingInput   = document.getElementById("emailInput");
+
+        if (checkbox.checked) {
+      
+            if (!existingInput) {
+                let input = document.createElement("input");
+                input.type = "email";
+                input.placeholder = "Zadej email";
+                input.id = "emailInput";
+
+                form.appendChild(input);
+                form.appendChild(document.createElement("br"));
+            }
+        } else {
+
+            if (existingInput) {
+                existingInput.remove();
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

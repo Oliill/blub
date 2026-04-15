@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opakování HTML</title>
+</head>
+<body>
+    <h1>Opakování HTML</h1>
+    <p align="justify">
+        Nějaký random text... bla bla bla ... Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+    </p>
+
+    <p>meli byste udelat odradkovani<br>
+    ten vzorec je x<sub>1,2</sub>=(b<sup>2</sup>-sqrt(D))/(2a)</p>
+
+    <p align="center">Zde vložíte obrázek...</p>
+    <img src="../../obrazky/burns.webp" width="30%"  alt="Tady je obrázek pana Burnse">
+    <ul>
+       <li>Položka 1</li>
+       <ul>
+            <li>Položka 1.1</li>
+            <li>Položka 1.2</li>
+            <li>Položka 1.3</li>
+       </ul>
+        <li>Položka 2</li>
+       <ul>
+            <li>Položka 2.1</li>
+            <li>Položka 2.2</li>
+            <li>Položka 2.3</li>
+       </ul>
+    </ul>
+    <table border="3">
+        <tr>
+            <th>sloupec 1</th>
+            <th>sloupec 2</th>
+            <th>sloupec 3</th>
+        </tr>
+        <tr>
+            <td colspan="3">neco 1</td>
+        </tr>
+        <tr>
+            <td rowspan="2">neco 2</td>
+            <td>neco 3</td>
+            <td>neco 5</td>
+        </tr>
+
+        <tr>
+            <td>neco 4</td>
+            <td>neco 6</td>
+        </tr>
+    </table>
+    <form>
+        <label for="jmeno">Zadej jméno </label><input type="text" name="jmeno" id="jmeno"><br>
+        <label for="heslo">Zadej heslo </label><input type="password" name="heslo" id="heslo">
+        <br>
+        Vyber možnost<br>
+        <label for="A">A</label><input type="radio" name="valueRadio" id="A" checked><br>
+        <label for="B">B</label><input type="radio" name="valueRadio" id="B"><br>
+        <label for="C">C</label><input type="radio" name="valueRadio" id="C"><br>
+
+    </form>
+
+    <form>
+        <label>
+            <input type="checkbox" name="vek" value="18+">
+            potvrzuji že mi je 18 let
+
+
+        </label>
+        <br><br>
+    <label for="barva"> Vyber si barvu:</label>
+    <select name="barva" id="barva">
+        <option value="red">červená</option>
+        <option value="green"> zelená</option>
+        <option value="blue">modrá</option>
+    </select>
+    <br>
+    <textarea rows="10" cols="50" placeholder="Zadej nějaký text" name="textovePole"></textarea>
+    <br>
+    <label for="cislo">Zadej číslo:</label><input type="number" name="cislo" id="cislo">
+    <br>
+    <label for="datum">Zadej číslo:</label><input type="date" name="datum" id="datum">
+    <br>
+    <label for="rozsah">Zadej číslo:</label><input type="range" name="rozsah" id="rozsah">
+
+</form>
+
+</body>
+</html>

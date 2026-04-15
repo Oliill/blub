@@ -1,0 +1,3 @@
+Úkol: modifikujte kód na hledání minima (je na Nku pod názvem JS_minimum) tak, aby fungoval následovně:
+
+Uživatel bude rovnou zadávat jednotlivé číselné hodnoty, ze kterých chce najít minimum (nebude muset předem zadávat jejich počet), jakmile bude chtít ukončit zadávání (a vypsat minimum), vyplní do promptu místo číselné hodnoty text "STOP"

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sněhulák</title>
+    <script>
+        function zvetsitSnehulaka()
+        {
+            let snehulak = document.getElementById("obrazek");
+            snehulak.width = snehulak.width*1.1;
+        }
+
+        function resetVelikostiSnehulaka()
+        {
+            let snehulak = document.getElementById("obrazek");
+            snehulak.width = "100";
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="reset velikosti" onclick="resetVelikostiSnehulaka()"><br>
+    <img src="snehulak.png" alt="obrázek sněhuláka" id="obrazek" 
+    onClick="zvetsitSnehulaka()" width="100">
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ziskejVstup()
+        {
+            let vstup = document.getElementById("emailInput").value;
+            return vstup;
+        }
+
+        function overZavinac(text)
+        {
+            let naselJsemZavinac = false;
+            for(let i = 0; i < text.length; i++)
+            {
+                if(text[i] == '@')
+                {
+                    naselJsemZavinac = true;
+                }
+            }
+            return naselJsemZavinac;
+        }
+
+        function overEmail()
+        {
+            let email = ziskejVstup();
+            let zavinac = overZavinac(email);
+            if(zavinac == true)
+            {
+                alert("email obsahuje @");
+            }
+            else
+            {
+                alert("email neobsahuje @");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <label for="emailInput">Zadej email: </label> <input type="text" id="emailInput">
+        <input type="button" value="Ověř email" onclick="overEmail()"
+    </form>
+    
+</body>
+</html>

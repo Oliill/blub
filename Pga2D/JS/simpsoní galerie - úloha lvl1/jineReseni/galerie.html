@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Galerie</title>
+  <script>
+    function vyber(id)
+    {
+    let obr1 = document.getElementById("obrazek1")
+    let obr2 = document.getElementById("obrazek2")
+    let obr3 = document.getElementById("obrazek3")
+
+    if (id == "obr1" ) {
+        obr1.height = 300;
+        obr2.height = 200;
+        obr3.height = 200;
+    }
+    else if (id == "obr2") {
+        obr1.height = 200;
+        obr2.height = 300;
+        obr3.height = 200;   
+    }
+    else if (id == "obr3") {
+        obr1.height = 200;
+        obr2.height = 200;
+        obr3.height = 300;
+    }
+    }
+
+
+  </script>
+  </head>
+  <body>
+  <h2>Klikni na obrázek:</h2><br>
+  <img src="obr1.jpg" alt="Obrázek simpsonovi" height="200" style="margin:10px" onclick="vyber('obr1')" id="obrazek1">
+  <img src="obr2.jpg" alt="Obrázek simpsonovi" height="200" style="margin:10px" onclick="vyber('obr2')" id="obrazek2">
+  <img src="obr3.jpg" alt="Obrázek simpsonovi" height="200" style="margin:10px" onclick="vyber('obr3')" id="obrazek3">
+
+    <p id="vypis"></p>
+  </body>
+</html>

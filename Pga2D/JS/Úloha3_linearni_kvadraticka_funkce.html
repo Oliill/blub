@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úloha 3 - kvadratická a lineární funkce</title>
+    <script>
+
+        function vlastnostiFunkce()
+        {
+            let cisloA = document.getElementById("cisloA").value*1;
+            let cisloB = document.getElementById("cisloB").value*1;
+            let cisloC = document.getElementById("cisloC").value*1;
+            let vystup = document.getElementById("odstavec");
+            //alert(typeof cisloA);
+            if(cisloA == 0)
+            {
+               //Zadaná funkce je lineární
+               vystup.innerHTML = "Zadaná funkce je lineární <br>"; 
+               if(cisloB > 0)
+               {
+                    //lineární rostoucí funkce
+                    vystup.innerHTML += "funkce je rostoucí <br>";
+                    let pXx = - cisloC / cisloB;
+                    vystup.innerHTML += "průsečík s osou X je P<sub>x</sub>=["+pXx+";0] <br>";
+                    let pYy = cisloC;
+                    vystup.innerHTML += "průsečík s osou Y je P<sub>y</sub>=[0;"+pYy+"] <br>";
+               }
+               else if(cisloB < 0)
+               {
+                    //lineární klesající funkce
+                    vystup.innerHTML += "funkce je klesající <br>";
+                    let pXx = - cisloC / cisloB;
+                    vystup.innerHTML += "průsečík s osou X je P<sub>x</sub>=["+pXx+";0] <br>";
+                    let pYy = cisloC;
+                    vystup.innerHTML += "průsečík s osou Y je P<sub>y</sub>=[0;"+pYy+"] <br>";
+               }
+               else
+               {
+                    //lineární konstantní funkce
+                    vystup.innerHTML += "funkce je konstantní <br>";
+                    if(cisloC == 0)
+                    {
+                        vystup.innerHTML += "funkce leží na ose X (má nekonečně mnoho x-ových průsečíků)";
+                        vystup.innerHTML += "průsečík s osou Y je P<sub>y</sub>=[0;0] <br>";
+                    }
+                    else
+                    {
+                        vystup.innerHTML += "neexistuje průsečík s osou x";
+                        vystup.innerHTML += "průsečík s osou Y je P<sub>y</sub>=[0;"+cislo+"] <br>";
+                    }
+               }
+            }
+            else
+            {
+                //Zadaná funkce je kvadratická
+
+                //vypočítáme souřadnice vrcholu:
+                let vrcholX = -cisloB/(2*cisloA);
+                let vrcholY = cisloC-((cisloB*cisloB)/(4*cisloA));
+
+                vystup.innerHTML = "Zadaná funkce je kvadratická <br>"; 
+                if(cisloA > 0)
+                {
+                    //parabola je konvexní
+                    vystup.innerHTML += "funkce je klesající na intervalu (-nekonečno; "+vrcholX+"), funkce je rostoucí na ("+vrcholX+"; nekonečno) <br>";
+                    vystup.innerHTML += "maximum nemá, minimum je vrchol V["+vrcholX+";"+vrcholY+"]";
+                }
+                else
+                {
+                    //parabola je konkávní
+                    vystup.innerHTML += "funkce je klesající na intervalu ("+vrcholX+"; nekonečno), funkce je rostoucí na (-nekonečno; "+vrcholX+") <br>";
+                    vystup.innerHTML += "minimum nemá, maximum je vrchol V["+vrcholX+";"+vrcholY+"] <br>";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Polynomické funkce</h1>
+    <h3> Tento program zjišťuje vlastnosti polynomických funkcí ve tvaru ax<sup>2</sup>+bx+c=0. Zadej jednotlivé koeficienty a,b,c:</h3>
+    
+    <form>
+        <label for="cisloA">a:</label><input type="number" id="cisloA">
+        <label for="cisloB">b:</label><input type="number" id="cisloB">
+        <label for="cisloC">c:</label><input type="number" id="cisloC">
+        <input type="button" value="Spustit!" onclick="vlastnostiFunkce()">
+    </form>
+    <p id="odstavec"></p>
+</body>
+</html>

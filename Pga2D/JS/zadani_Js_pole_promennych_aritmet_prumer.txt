@@ -1,0 +1,11 @@
+Napište JS kód, ve kterém:
+1) uživatel zadá do textového inputu řadu
+čísel oddělených "," (např. 2,1,3,5,8,1,0)
+
+2) vytvořte pole proměnných, které bude
+obsahovat jednotlivé číselné hodnoty ze vstupu
+
+3)vypočítejte aritmetický průměr ze zadaných
+čísel
+
+4) vypište výsledek (aritmet. průměr)

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globální proměnné</title>
+    <script>
+
+        let globalniPozdrav = "čau";
+
+        function prvniFunkce()
+        {
+            //Toto je lokální proměnná pozdrav - mohu ji využívat pouze uvnitř prvniFunkce
+            let pozdrav = "ahoj";
+            //alert(pozdrav);
+            alert(globalniPozdrav);
+        }
+
+        function druhaFunkce()
+        {
+            //alert(pozdrav);
+            alert(globalniPozdrav);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="fce1" onClick="prvniFunkce()">
+    <input type="button" value="fce2" onClick="druhaFunkce()">
+    
+</body>
+</html>

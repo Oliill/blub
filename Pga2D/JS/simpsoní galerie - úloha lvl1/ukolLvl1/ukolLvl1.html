@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </style>
+    <script>
+        let obrazek1;
+        let obrazek2;
+        let obrazek3;
+    function nactiObrazky()
+    {
+        let obrazek1 = document.getElementById("obr1");
+        let obrazek2 = document.getElementById("obr2");
+        let obrazek3 = document.getElementById("obr3");
+    }
+    function obraz1(){
+            obr1.width=200;
+            obr2.width=100;
+            obr3.width=100;
+        }
+    function obraz2(){
+            obr1.width=100;
+            obr2.width=200;
+            obr3.width=100;
+        }
+    function obraz3(){
+            obr1.width=100;
+            obr2.width=100;
+            obr3.width=200;
+    }
+   
+
+    </script>
+</head>
+<body onload="nactiObrazky()">
+    <img id="obr1" src="obr1.jpg" alt="obrazek1" width="100" onclick="obraz1()">
+    <img id="obr2" src="obr2.jpg" alt="obrazek2" width="100" onclick="obraz2()">
+    <img id="obr3" src="obr3.jpg" alt="obrazek3" width="100" onclick="obraz3()">
+</body>
+</html>

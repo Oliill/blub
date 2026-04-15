@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vánoční stromek</title>
+    <script>
+        let stromekSviti = false;
+        function zmenitObrazek()
+        {
+            let stromecek = document.getElementById("obrazek");
+            
+            if(stromekSviti == false)
+            {
+               stromecek.src = "stromSvitici.png";
+               stromekSviti = true;
+            }
+            else
+            {
+                stromecek.src = "stromNesvitici.png"; 
+                stromekSviti = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="stromNesvitici.png" alt="ošklivý vánoční stromek" id="obrazek" 
+    onClick="zmenitObrazek()">
+    
+</body>
+</html>

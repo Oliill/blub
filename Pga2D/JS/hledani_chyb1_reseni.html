@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hledáme chyby 1</title>
+    <script>
+
+        function kalkulacka()
+        {
+            let cislo1 = prompt("Zadej první číslo")*1;
+            let symbol = prompt("Zadej +,-,* nebo /");
+            let cislo2 = prompt("Zadej druhé číslo")*1;
+            let vystup = document.getElementById("odstavec");
+            let vysledek;
+            vystup.innerHTML = "Zadal jsi: " + cislo1 + " " + symbol + " " + cislo2;
+
+            // Podle zadaného symbolu použijeme příslušnou operaci:
+             
+            if (symbol == "+") {
+                vysledek = cislo1 + cislo2;
+            }
+            else if (symbol == "-") {
+                vysledek = cislo1 - cislo2;
+            }
+            else if (symbol == "*") {
+                vysledek = cislo1 * cislo2;
+            }
+            else if (symbol == "/") {
+                if (cislo2 == 0) {
+                    alert("nulou dělit neumím");
+                    return;
+                }
+                else {
+                    vysledek = cislo1 / cislo2;
+                }
+            }
+            else {
+                alert("zadej platnou operaci");
+                return;
+            }
+
+            //Následující dva řádky mají stejný význam, druhý je jen kratší:
+            //vystup.innerHTML = vystup.innerHTML + ". Výsledek je: " + vysledek;
+            vystup.innerHTML += ". Výsledek je: " + vysledek;
+        }
+    </script>
+</head>
+<body onload="kalkulacka()">
+    <h3>Ve</h3>
+    <p id="odstavec"></p>
+</body>
+</html>

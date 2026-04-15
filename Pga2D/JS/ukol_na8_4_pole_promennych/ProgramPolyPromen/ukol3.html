@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function start()
+        {
+            let UpSlovo=""
+            let slovo = prompt("zadej slovo");
+            let check=document.getElementById("TypOdpovedi").checked;
+            let i = 0;
+            for(i;i<slovo.length;i++)
+            {
+            let pismeno=slovo[i];
+            if(pismeno=='a' || pismeno=='A')
+            {
+                UpSlovo+=1;
+            }
+            else
+            {
+                UpSlovo+=slovo[i];
+            }
+            }
+            if(check)
+            {
+                document.getElementById("output").innerHTML=UpSlovo;
+            }
+            else
+            {
+                alert("Slovo je "+UpSlovo);
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>ceknuti ze chcete formularovou odpoved</p>
+    <input type="checkbox" id="TypOdpovedi"><br>
+    <input type="button" onclick="start()" value="start">
+    <p id="output"></p>
+</body>
+</html>

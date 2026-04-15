@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - obsah čtverce</title>
+    <script>
+        //let druhaOdmocnina = Math.sqrt(2);
+        //let druhaMocnina = 2*2;
+
+        function spustiSePoKliknuti()
+        {
+            //alert("kliknul jsi na tlačítko");
+
+            //Najdu daný HTML prvek na stránce pomocí ID:
+            let formularovyPrvek = document.getElementById("cisloInput");
+            //alert(typeof formularovyPrvek);
+
+            //Podívám se na hodnotu atributu value u daného form. prvku
+            //tam naleznu to, co do daného inputu zadal uživatel:
+            let ciselnyVstup = formularovyPrvek.value*1;
+            alert(typeof ciselnyVstup);
+        }
+
+    </script>
+</head>
+<body>
+<form>
+    <label for="cisloInput">Zadej číslo: </label>
+    <input type="number" id="cisloInput" value="123456">
+    <input type="button" value="Spustit" onclick="spustiSePoKliknuti()">
+</form>
+
+    
+</body>
+</html>

@@ -1,0 +1,6 @@
+Úkol: 
+1) Najít souřadnici bodu na jednotkové kružnici - souřadnice chceme vyjádřit pomocí sin a cos. 
+
+2) Jak se změní souřadnice, pokud kružnice nebude mít poloměr 1? 
+
+3) Jak se změní souřadnice, pokud střed kružnice nebude v počátku souřadného systému, ale bude posunutý?

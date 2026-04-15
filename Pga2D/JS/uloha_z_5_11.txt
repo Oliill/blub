@@ -1,0 +1,11 @@
+Napište program v JS, ve kterém se pomocí
+dialogových oken pro vstup zeptáme uživatele
+na dvě číselné hodnoty, ty následně sečteme
+a jejich součet vypíšeme.
+
+Pomocí funkce isNaN() ověřte, zdali jsou
+vstupy validní (že se nejedná o text).
+Když jsou vstupy číselné, proběhne součet,
+pokud nejsou, vypíšete chybovou hlášku.
+
+

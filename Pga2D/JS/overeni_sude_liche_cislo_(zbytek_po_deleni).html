@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sudeLiche()
+        {
+            let cislo = document.getElementById("vstup").value*1;
+
+            let zaokrouhleneCislo = parseInt(cislo);
+            //zjistíme, jestli cislo-zaokrouhleneCislo je různé od 0:
+            if(cislo-zaokrouhleneCislo != 0)
+            {
+                alert("Musíš zadat celé číslo!");
+                return;
+            }
+            if(cislo % 2 == 0)
+            {
+                alert("číslo je sudé");
+            }
+            else
+            {
+                alert("číslo je liché");
+            }
+        }
+        </script>
+</head>
+<body>
+    <form>
+        <label>Zadej číslo:</label><input type="number" id="vstup">
+        <input type="button" value="Start!" onclick="sudeLiche()">
+    </form>
+</body>
+</html>

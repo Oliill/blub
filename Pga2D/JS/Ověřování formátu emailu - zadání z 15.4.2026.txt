@@ -1,0 +1,3 @@
+Napište JS kód, ve kterém:
+uživatel do textového inputu zadá svůj email, po kliknutí na tlačítko program udělá kontrolu, zdali email obsahuje @, dále udělá kontrolu, zdali email končí koncovkou .cz nebo .com
+

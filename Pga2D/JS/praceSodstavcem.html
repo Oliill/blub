@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odstavec - vícero výpisů</title>
+    <script>
+        function pridejText()
+        {
+            let vypis = document.getElementById("odstavec");
+            //vypis.innerHTML = vypis.innerHTML + "<br> ahoj";
+            //Následující řádek má stejný význam jako předchozí, jen je zápis zkrácen
+            vypis.innerHTML += "<br> ahoj";
+        }
+        </script>
+</head>
+<body>
+    <form>
+        <input type="button" value="Vypiš text" onclick="pridejText()">
+    </form>
+    <p id="odstavec">čau</p>
+    
+</body>
+</html>

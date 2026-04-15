@@ -1,0 +1,9 @@
+Napište JS kód programu, který vypíše po načtení stránky do odstavce na stránce čísla od 1 do 10 (včetně). V programu využijte cyklus pro výpis jednotlivých čísel. Výpis bude vypadat následovně:
+1, 2, 3, ... 
+
+_________________________________
+
+Napište JS kód programu, který bude mít následující průběh:
+1) po načtení stránky se program zeptá uživatele pomocí dialogového okna na počet čísel, které bude chtít uživatel zadat
+2) poté se program bude ptát opakovaně uživatele pomocí dialogového okna na jednotlivá čísla ("Zadej číslo:", "Zadej číslo", "Zadej číslo", ...). Čísel (resp. dotazů) bude tolik, kolik zadal uživatel na začátku.
+3) Po zadání čísel program vypíše součet všech čísel zadaných uživatelem v bodě 2)

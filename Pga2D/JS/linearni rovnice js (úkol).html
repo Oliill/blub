@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="a" type="number" placeholder="a">
+<input id="b" type="number" placeholder="b">
+<button onclick="spocitej()">Spočítat</button>
+
+<p id="vysledek"></p>
+
+<script>
+function spocitej(){
+  let a = document.getElementById("a").value;
+  let b = document.getElementById("b").value;
+
+  if(a === "" || b === ""){ alert("Zadej obě čísla."); return; }
+
+  a = Number(a);
+  b = Number(b);
+
+  if(a !== 0){
+    document.getElementById("vysledek").textContent = "x = " + (-b/a);
+  } else {
+    if(b === 0){
+      document.getElementById("vysledek").textContent = "Nekonečno řešení.";
+    } else {
+      document.getElementById("vysledek").textContent = "Žádné řešení.";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

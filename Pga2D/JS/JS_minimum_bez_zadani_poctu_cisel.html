@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       // První vstup si uložím jako aktuálně nalezené nejmenší číslo ze zadaných
+       let minimum = prompt("Zadej první číslo")*1;
+       // Budu se ptát na jednotlivá čísla, když najdu menší, uložím si ho do proměnné minimum
+       let cislo;
+       while(cislo != "STOP")
+       {
+        cislo = prompt("zadej číslo");
+        if(cislo < minimum)
+        {
+            minimum = cislo;
+        }
+       }
+       //v proměnné minimum mám nejmenší ze zadaných čísel
+       alert("minimum ze zadaných čísel je: "+minimum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

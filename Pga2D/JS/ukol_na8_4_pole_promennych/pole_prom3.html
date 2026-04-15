@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    zadej slovo <input type="text" id="vstup">
+    <button onclick="spust()">rozdelit</button>
+    <p id="vystup"></p>
+
+    <script>
+        function spust() {
+            let slovo = document.getElementById("vstup").value;
+            let pole = slovo.split("");
+
+            for (let i = 0; i < pole.length; i++) {
+                if (pole[i] == "a") {
+                    pole[i] = "1";
+                }
+            }
+
+            document.getElementById("vystup").textContent = pole.join("");
+        }
+    </script>
+</body>
+</html>

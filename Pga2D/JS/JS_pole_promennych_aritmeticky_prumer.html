@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script>
+  function pole()
+  {
+    let input = document.getElementById("input").value;
+    let pole = input.split(",");
+    //alert(pole[2]);
+  /*
+  //Následující kód nahrazujeme pomocí řádku let pole = input.split(","); - proto je zakomentovaný
+    let inputPole = new Array();
+    let pocetCisel = 0;
+    for(let i = 1; i < input.length; i++)
+    {
+       if(input[i] == ",")
+       {
+        inputPole[pocetCisel] = input[i-1];
+        pocetCisel++;
+       }
+    }
+  */
+    
+    let soucet = 0
+    for (let i = 0; i < pole.length; i++)
+    {
+      soucet += pole[i]*1
+    }
+    
+    let pocetCisel = pole.length;
+    let prumer = soucet/pocetCisel;
+    
+    alert("Průměr je: "+prumer);
+  }
+
+  </script>
+  <body>
+  <form>
+          <input id="input"> <br>
+          <input type="button" value="Start!" onclick="pole()">
+  </form>
+  </body>
+</html>

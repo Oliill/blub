@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS kalkulačka</title>
+    <script>
+        function kalkulacka()
+        {
+            let cislo1 = document.getElementById("cislo1Input").value*1;
+            let znakOperace = document.getElementById("operaceInput").value;
+            let cislo2 = document.getElementById("cislo2Input").value*1;
+            let vystupniOdstavec = document.getElementById("odstVystup");
+            let vysledek;
+
+            if(znakOperace == "+")
+            {
+                vysledek = cislo1+cislo2;
+            }
+            else if(znakOperace == "-")
+            {
+                vysledek = cislo1-cislo2;
+            }
+            else if(znakOperace == "*")
+            {
+                vysledek = cislo1*cislo2;
+            }
+            else if(znakOperace == "/")
+            {
+                if(cislo2 == 0)
+                {
+                   alert("nulou dělit fakt nebudu!");
+                   return; 
+                }
+                vysledek = cislo1/cislo2;
+            }
+            else
+            {
+                alert("Tuto operaci neznám! Zadej +,-,* nebo /");
+                return;
+            }
+
+            vystupniOdstavec.innerHTML = cislo1+znakOperace+cislo2+"="+vysledek;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="cislo1Input">zadej první číslo: </label>
+        <input type="number" id="cislo1Input"><br>
+        <label for="operaceInput">zadej znak operace: </label>
+        <input type="text" id="operaceInput"><br>
+        <label for="cislo2Input">zadej druhé číslo: </label>
+        <input type="number" id="cislo2Input"><br>
+        <input type="button" value="Počítej!" onclick="kalkulacka()">
+    </form>
+    <p id="odstVystup"></p>
+</body>
+</html>

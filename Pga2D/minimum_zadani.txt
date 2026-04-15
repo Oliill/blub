@@ -1,0 +1,7 @@
+
+  Vytvořte program v JS, který bude fungovat následovně:
+  1) Program se uživatele zeptá na počet čísel (uživ. zadá např. 10)
+  2) Program se bude ptát na jednotlivá čísla pomocí dialog. oken   
+     prompt() (uživ. tak zadá např. 10 čísel)
+  3) Program vypíše v alert oknu minimum ze zadaných čísel 
+     (tzn. to nejmenší z těch, které uživatel zadal)

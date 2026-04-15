@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function start()
+        {
+        let promenne=document.getElementById("promenne").value;
+        let slovo=prompt("zadej slovo s vice nez 2pismen");
+        let i = 0;
+        let UpSlovo ="";
+        if(slovo.length<=2)
+        {
+            alert("nezadalste validni slovo")
+            return
+        }
+        for(i;i<slovo.length;i++)
+        {
+            let pismeno=slovo[i];
+            if(i==1)
+            {
+                UpSlovo+=promenne;
+            }
+            else
+            {
+                UpSlovo+=pismeno;
+            }
+        }
+        alert("Nove slovo je "+UpSlovo)
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="promenne pismo" id="promenne">
+    <input type="button" onclick="start()" value="tlacitko">
+</body>
+</html>
