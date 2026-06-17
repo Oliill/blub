@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Šifrovačka</title>
+    <script>
+        function zasifrujText()
+        {
+            let vstupniText = document.getElementById("vstupniInput").value;
+            let vystupniOdstavec = document.getElementById("vystupniOdstavec");
+            let vstupniTextArray = vstupniText.split("");
+            let vystup = "";
+            // alert(vstupniTextArray);
+            for(let i = 0; i < vstupniTextArray.length; i = i + 2)
+            {
+                if(i+1 < vstupniTextArray.length)
+                {
+                    vystup += vstupniTextArray[i+1];
+                    vystup += vstupniTextArray[i];
+                }
+                else
+                {
+                    vystup += vstupniTextArray[i];
+                }
+            }
+            vystupniOdstavec.innerHTML += vystup;
+        }
+        </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="vstupniInput">
+        <input type="button" value="Šifruj!" onclick="zasifrujText()">
+    </form>
+    <p id="vystupniOdstavec">Zašifrovaný text: </p>
+
+    
+</body>
+</html>

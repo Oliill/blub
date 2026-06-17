@@ -1,0 +1,3 @@
+Máte k dispozici hrůzostrašná data (viz síťový disk N/Pga2D). Ve skutečnosti jsou to souřadnice ve formátu X:4,Y:0,Z:4,T:1/ Tento zápis znamená, že souřadnice X má hodnotu 4, Y má hodnotu 0, Z má hodnotu 4 a T je nějaká doplňková souřadnice, / je pak ukončovací znak oddělující jednotlivé souřadnice.
+
+Napište program v JS, ve kterém vytvoříte textové pole (textarea), překopírujete do tohoto textového pole celý obsah souboru hruzostrasna_data.txt a program vám následně vypíše nejmenší a největší X-ovou souřadnici, nejmenší a největší Y-ovou souřadnici a nejmen. a největší. Z souřadnici. Výpis provádějte do odstavce

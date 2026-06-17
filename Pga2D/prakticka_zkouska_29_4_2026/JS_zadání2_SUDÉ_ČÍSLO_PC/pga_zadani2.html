@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Zadání 2 - slovní fotbal</title>
+    <style>
+        .hraci {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .box {
+            border: 2px solid #333;
+            padding: 15px;
+            width: 45%;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+
+
+    </script>
+</head>
+<body>
+    <h1>Slovní fotbal</h1>
+    <form>
+        <label for="vstupHtml">Zadej slovo: </label><input type="text" id="vstupHtml" /><br />
+        <input type="button" value="Odeslat slovo" onclick="odeslatSlovo()"/>
+    </form>
+    <h3>Hraje zelený hráč</h3>
+    <div class="hraci">
+        <div class="box" id="hrac1Box">
+            <h2 style="color:green;" id="hrac1Text">Hráč 1</h2>
+            <h2 id="skoreHrac1">Počet bodů:0</h2>
+            <div id="mickyHrac1"></div>
+        </div>
+
+        <div class="box" id="hrac2Bbox">
+            <h2 id="hrac2Text">Hráč 2</h2>
+            <h2 id="skoreHrac2">Počet bodů:0</h2>
+            <div id="mickyHrac2"></div>
+        </div>
+    </div>
+</body>
+</html>

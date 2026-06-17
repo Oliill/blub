@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analýza dat</title>
+    <script>
+        function ziskejVstup()
+        {
+            let vstupniText = document.getElementById("textovePole").value;
+            if(vstupniText == "")
+            {
+                alert("nejdříve zadej vstupní text, nemám nyní co analyzovat!");
+                return false;
+            }
+            return vstupniText;
+        }
+
+        function ziskejMinMaxZeSouradnic(souradnice, data)
+        {
+            let aktualniMinimum = Number.MAX_VALUE;
+            let aktualniMaximum = Number.MIN_VALUE;
+
+            for(let i = 0; i < data.length; i++)
+            {
+                if(data[i] == souradnice)
+                {
+                    let hodnotaSouradnice = data[i+2]*1;
+                    if(hodnotaSouradnice < aktualniMinimum)
+                    {
+                        aktualniMinimum = hodnotaSouradnice;
+                    }  
+                    if(hodnotaSouradnice > aktualniMaximum)
+                    {
+                        aktualniMaximum = hodnotaSouradnice;
+                    }  
+                }
+            }
+            let minMax = [aktualniMinimum, aktualniMaximum];
+            return minMax;
+        }
+
+        function ziskejMaximumZeSouradnic(souradnice, data)
+        {
+            let aktualniMaximum = Number.MIN_VALUE;
+            for(let i = 0; i < data.length; i++)
+            {
+                if(data[i] == souradnice)
+                {
+                    let hodnotaSouradnice = data[i+2]*1;
+                    if(hodnotaSouradnice > aktualniMinimum)
+                    {
+                        aktualniMaximum = hodnotaSouradnice;
+                    }  
+                }
+            }
+            return aktualniMinimum;
+        }
+
+        function analyzaDat()
+        {
+            let data = ziskejVstup();
+            if(data == false)
+            {
+                return
+            }
+            let minimumX = ziskejMinimumZeSouradnic('X', data);
+            let minimumY = ziskejMinimumZeSouradnic('Y', data);
+            let minimumZ = ziskejMinimumZeSouradnic('Z', data);
+            let minimumT = ziskejMinimumZeSouradnic('T', data);
+            alert("MinX:"+minimumX+", MinY:"+minimumY+", MinZ:"+minimumZ+", MinT:"+minimumT);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <textarea id="textovePole" rows="10" cols="50"></textarea>
+        <input type="button" value="analyzuj!" onclick="analyzaDat()">
+    </form>
+    
+</body>
+</html>

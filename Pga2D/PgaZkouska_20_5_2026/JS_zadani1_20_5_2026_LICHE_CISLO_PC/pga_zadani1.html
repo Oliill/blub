@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #zadaneSlovoDiv, #vystup {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1rem;
+            width: 300px;
+            margin-top: 10px;
+        }
+    </style>
+    <title>Zadání č.1 - liché číslo PC</title>
+    <script>
+      
+
+    </script>
+</head>
+<body onload="pripravTestovani()">
+    <div class="container">
+        <div id="zadaneSlovoDiv">Zadané slovo: <span id="slovo"></span></div>
+
+        <form id="preklad-form">
+            <label for="sekvenceVstup">Zadej sekvenci i/í/y/ý v takovém pořadí, v jakém je potřeba je doplnit do zadaného slova. Jednotlivá i/í/y/ý odděluj čárkou:</label>
+            <input type="text" id="sekvenceVstup" name="sekvence"> <br />
+            <input type="button" value="Odeslat" onclick="checkniVstup()" />
+        </form>
+        <div id="vystup">
+
+        </div>
+        <div id="skore">
+
+        </div>
+    </div>
+</body>
+</html>

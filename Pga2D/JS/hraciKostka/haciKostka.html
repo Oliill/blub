@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hrací kostka</title>
+    <script>
+        function hodKostkou()
+        {
+            let kostka = document.getElementById("kostkaObrazek");
+            // zjistěte info o této funkci - co nám vrací? k čemu je?
+            let nahodneCislo = Math.floor(6*Math.random()+1);
+            kostka.src="obrazky/k"+nahodneCislo+".png";
+            //alert(nahodneCislo);
+        }
+    </script>
+</head>
+<body>
+    <h1>Hrací kostka</h1>
+    <h3>Pro hod kostkou stačí kliknout na obrázek hrací kostky</h3>
+    <img src="obrazky/k1.png" id="kostkaObrazek" alt="Obrázek hrací kostky" onclick="hodKostkou()"><br>
+</body>
+</html>

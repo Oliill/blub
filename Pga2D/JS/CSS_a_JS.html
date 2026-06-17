@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS a JS</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+
+    .odstavec{
+        font-size: 30px;
+    }
+
+    .odstavecJinak{
+        font-size: 10px;
+        color: #FF00FF;
+    }
+</style>
+<script>
+    function zmenaOdstavcu()
+    {
+        let odstavceSClassou = document.querySelectorAll(".odstavec");
+        console.log(odstavceSClassou);
+        for(let i = 0; i < odstavceSClassou.length; i++)
+        {
+            odstavceSClassou[i].classList.remove("odstavec");
+            odstavceSClassou[i].classList.add("odstavecJinak");
+        }
+    }
+
+</script>
+<body>
+    <h1> Testovací stránka</h1>
+        <h1> Testovací stránka</h1>
+    <form>
+        <input type="button" value="Změň odstavce" onclick="zmenaOdstavcu()">
+    </form>
+    <p class="odstavec"> 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+    </p>
+    <p class="odstavec"> 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+    </p>
+    <p> 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+    </p>
+        <p> 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+    </p>
+        <p class="odstavec"> 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+        Nějaký random text... Nějaký random text... Nějaký random text... Nějaký random text... 
+    </p>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>JS - opakovací a rozšiřovací lekce</title>
+  <style>
+  .bilaBG{
+            background-color: #FFFFFF;
+            color: #000000;
+            transition: background-color 2s;
+  }
+  .cernaBG{
+            background-color: #000000;
+            color: #FFFFFF;
+            transition: background-color 2s;  
+  }
+  </style>
+  <script>
+    let rozsviceno = true;
+    function zmenaPozadi()
+    {
+      if(rozsviceno == true)
+      {
+        let prvkyBilaBG = document.querySelectorAll(".bilaBG");
+        let tlacitko = document.getElementById("tlacitko");
+        tlacitko.value = "Rozsvítit!"
+        // console.log(prvkyBilaBG);
+        prvkyBilaBG[0].classList.remove("bilaBG");
+        prvkyBilaBG[0].classList.add("cernaBG");
+        rozsviceno = false;
+      }
+      else
+      {
+        let prvkyBilaBG = document.querySelectorAll(".cernaBG");
+        let tlacitko = document.getElementById("tlacitko");
+        tlacitko.value = "Zhasnout!"
+        // console.log(prvkyBilaBG);
+        prvkyBilaBG[0].classList.remove("cernaBG");
+        prvkyBilaBG[0].classList.add("bilaBG");
+        rozsviceno = true;
+      }
+    }
+
+    function zmenaSablonyPodleCasu()
+    {
+      let datum = new Date();
+      let aktualniMinuty = datum.getMinutes();
+      alert(aktualniMinuty);
+    }
+  </script>
+  <noscript>
+   Váš prohlížeč nepodporuje JavaScript, pokud by ho podporoval, viděli byste úplně něco jiného než teď! Zapněte si ho!!! 
+  </noscript>
+  <head>
+  <body class="bilaBG" onload="zmenaSablonyPodleCasu()">
+  <form>
+ <input type="button" value="Zhasnout!" onclick="zmenaPozadi()" id="tlacitko">
+  </form>
+  <p>Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...Toto je nějaký pokusný odstavec...</p>
+  </body>
+  </html>

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #ceske-slovo, #vystup {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1rem;
+            width: 300px;
+            margin-top: 10px;
+        }
+    </style>
+    <title>Zadání č.2 - sudé číslo PC</title>
+    <script>
+        
+
+    </script>
+</head>
+<body onload="pripravHru()">
+    <div class="container">
+        <div id="ceske-slovo">České slovo: <span id="slovo"></span></div>
+
+        <form id="preklad-form">
+            <label for="preklad">Překlad:</label>
+            <input type="text" id="preklad" name="preklad"> <br />
+            <input type="button" value="Odeslat" onclick="checkniVstup()" />
+        </form>
+        <div id="vystup">
+
+        </div>
+        <div id="skore">
+
+        </div>
+    </div>
+</body>
+</html>
